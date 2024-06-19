@@ -4,11 +4,12 @@ import j003_Modificador_2.Visitante;
 public class Main {
 
     public static void main(String[] args) {
-        Casa miCasa = new Casa();
+        Casa casa = new Casa();
         Habitacion miHabitacion = new Habitacion();
         Visitante visitante = new Visitante();
 
-        miCasa.saludar();
+        casa.saludar();
+        casa.mostrarDireccion();
         miHabitacion.saludar();
         miHabitacion.mostrarDireccionCompleta();
         visitante.visitarCasa();
