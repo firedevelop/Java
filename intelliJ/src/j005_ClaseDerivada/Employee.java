@@ -1,7 +1,7 @@
 package j005_ClaseDerivada;
 import java.util.Date;
 
-public class Empleado {
+public class Employee {
     // Atributos
     private String passport;
     private String name;
@@ -9,14 +9,14 @@ public class Empleado {
     private Date birthDay;
 
     // Constructor por Defecto
-    public Empleado() {
+    public Employee() {
         this.passport = "100200300";
         this.name = "John";
         this.salary = 1000;
         this.birthDay = new Date();
     }
     // Constructor Parametrizado
-    public Empleado(String passport, String name, double salary, Date fn) {
+    public Employee(String passport, String name, double salary, Date fn) {
         this.passport = passport;
         this.name = name;
         this.salary = salary;
