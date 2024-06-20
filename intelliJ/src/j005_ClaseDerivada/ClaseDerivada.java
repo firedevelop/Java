@@ -11,7 +11,7 @@ public class ClaseDerivada extends Empresa {
 
     // Métodos adicionales específicos de ClaseDerivada
     public void mostrarInformacion() {
-        System.out.println("Empleado: " + emp.getNombre());
+        System.out.println("Empleado: " + emp.getName());
         System.out.println("Teléfono: " + telefono);
         System.out.println("Dirección: " + direccion);
     }

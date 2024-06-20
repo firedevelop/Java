@@ -12,11 +12,11 @@ public class Empresa {
     public Empresa() {
         emp = new Empleado();
         telefono = 900730222;
-        direccion = "Turó Gardeny 25003 Lleida";
+        direccion = "Gran Via 33";
     }
 
     public Empresa(Empleado e) {
-        this(e, 900730222, "Turó Gardeny 25003 Lleida");
+        this(e, 900730222, "Sol 1");
     }
 
     public Empresa(int tel, String dir) {
