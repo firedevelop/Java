@@ -1,5 +1,5 @@
 package j005_ClaseDerivada;
-public class ClaseDerivada extends Bussiness {
+public class ClaseDerivada extends Business {
     // Constructor
     public ClaseDerivada() {
         super(); // Llama al constructor de Empresa

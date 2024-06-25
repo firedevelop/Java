@@ -3,27 +3,27 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Bussiness {
+public class Business {
     protected Employee employee; // Cambiado a protected para el acceso en ClaseDerivada
     protected int phone; // Cambiado a protected para el acceso en ClaseDerivada
     protected String address; // Cambiado a protected para el acceso en ClaseDerivada
 
     // Constructores
-    public Bussiness() {
+    public Business() {
         employee = new Employee();
         phone = 900730222;
         address = "Gran Via 33";
     }
 
-    public Bussiness(Employee employee) {
+    public Business(Employee employee) {
         this(employee, 900730222, "Sol 1");
     }
 
-    public Bussiness(int phone, String address) {
+    public Business(int phone, String address) {
         this(new Employee(), phone, address);
     }
 
-    public Bussiness(Employee employee, int phone, String address) {
+    public Business(Employee employee, int phone, String address) {
         this.employee = employee;
         this.phone = phone;
         this.address = address;
