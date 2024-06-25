@@ -4,33 +4,35 @@ import java.util.Date;
 
 public class MainApp {
     public static void main(String[] args) {
-        // Crear una instancia de Empleado con el constructor por defecto
-        Empleado empleado1 = new Empleado();
-        System.out.println("Empleado1: " + empleado1.getNombre() + ", " + empleado1.getDni() + ", " + empleado1.getSueldo() + ", " + empleado1.getFechaNac());
+        Employee employee1 = new Employee();
+        System.out.println("Empleado1: " + employee1.getName() + ", " + employee1.getPassport() + ", " + employee1.getSalary() + ", " + employee1.getBirthDay());
 
-        // Crear una instancia de Empleado con el constructor con parámetros
-        Date fechaNac = new Date();
-        Empleado empleado2 = new Empleado("12345678A", "Juan Pérez", 2000, fechaNac);
-        System.out.println("Empleado2: " + empleado2.getNombre() + ", " + empleado2.getDni() + ", " + empleado2.getSueldo() + ", " + empleado2.getFechaNac());
 
-        // Crear una instancia de Empresa
-        Empresa empresa = new Empresa(empleado2, 123456789, "Calle Falsa 123");
-        System.out.println("Empresa: " + empresa.emp.getNombre() + ", " + empresa.telefono + ", " + empresa.direccion);
+        Date birthDay = new Date();
+        Employee employee2 = new Employee("12345678A", "Mery", 2000, birthDay);
+        System.out.println("Empleado2: " + employee2.getName() + ", " + employee2.getPassport() + ", " + employee2.getSalary() + ", " + employee2.getBirthDay());
 
-        // Calcular horas extras para el empleado
-        double horasExtras = empresa.horasExtras(10);
+        Business business = new Business(employee2, 123456789, "Wall Street 100");
+        System.out.println("Empresa: " + business.employee.getName() + ", " + business.phone + ", " + business.address);
+
+        double horasExtras = business.horasExtras(10);
         System.out.println("Horas extras: " + horasExtras);
+        double horasExtras2 = employee1.horasExtras(10);
+        System.out.println("Horas extras2: " + horasExtras2);
 
-        // Dar formato a una fecha
         try {
-            Date fechaFormateada = empresa.fechaNac("15/06/1985");
+            Date fechaFormateada = business.fechaNac("15/06/1985");
             System.out.println("Fecha formateada: " + fechaFormateada);
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
         // Crear una instancia de ClaseDerivada y mostrar la información
-        ClaseDerivada claseDerivada = new ClaseDerivada(empleado2, 987654321, "Avenida Siempre Viva 742");
+        ClaseDerivada claseDerivada = new ClaseDerivada(
+                employee2, 987654321,
+                "Quinta Avenida 10");
         claseDerivada.mostrarInformacion();
+        ClaseDerivada claseDerivadaDefault = new ClaseDerivada();
+
     }
 }
