@@ -1,8 +1,7 @@
 package j008_Modifiers;
-
 import j007_Modifiers.ClassA;
 
-public class ClassD extends ClassC {
+public class ClassD extends ClassA {
     public void testAccess() {
         ClassC objC = new ClassC();
 
@@ -19,14 +18,18 @@ public class ClassD extends ClassC {
 
         // Accesos a ClassA desde un paquete diferente
         ClassA objA = new ClassA();
+
         objA.publicVar = 1; // Accesible
-        // objA.protectedVar = 2; // No accesible fuera del paquete, incluso para subclases
+         //objA.protectedVar = 2; // No accesible fuera del paquete, incluso para subclases
         // objA.defaultVar = 3; // No accesible fuera del paquete
         // objA.privateVar = 4; // No accesible fuera de ClassA
 
         objA.publicMethod(); // Accesible
-        // objA.protectedMethod(); // No accesible fuera del paquete, incluso para subclases
-        // objA.defaultMethod(); // No accesible fuera del paquete
-        // objA.privateMethod(); // No accesible fuera de ClassA
+        /*
+         objA.protectedMethod(); // No accesible fuera del paquete, incluso para subclases
+         objA.defaultMethod(); // No accesible fuera del paquete
+         objA.privateMethod(); // No accesible fuera de ClassA
+        */
     }
 }
+
