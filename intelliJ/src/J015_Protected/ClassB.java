@@ -8,6 +8,7 @@ public class ClassB extends ClassA{
         this.protectedMethod();
 
         ClassA objA = new ClassA();
-        objA.protectedMethod();
+        // objA.protectedVar = 5; // No access
+        // objA.protectedMethod(); // No access
     }
 }
