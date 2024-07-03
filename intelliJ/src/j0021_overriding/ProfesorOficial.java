@@ -5,7 +5,7 @@ public class ProfesorOficial extends Profesor {
         if (comprobarDNI(dni)) {
             super.dni = dni;
         } else {
-            throw new IllegalArgumentException("DNI inválido para ProfesorOficial: " + dni);
+            throw new IllegalArgumentException("DNI inválido para Pr" + dni);
         }
         super.nombre = nombre;
         super.edad = edad;
@@ -21,13 +21,13 @@ public class ProfesorOficial extends Profesor {
     // Sobrescritura del método pacs de la clase padre
     @Override
     public double examenes(double examen1, double examen2, double examen3) {
-        double notaFinal = ((examen1 + examen2 + examen3) / 3) + 0.6;
-        return notaFinal;
+        double nota_final = ((examen1 + examen2 + examen3) / 3) + 0.6;
+        return nota_final;
     }
 
     // Sobrecarga del método pacs para cuatro parámetros
     public double pacs(double examen1, double examen2, double examen3, double examen4) {
-        double notaFinal = (examen1 + examen2 + examen3 + examen4) / 4;
-        return notaFinal;
+        double nota_final = (examen1 + examen2 + examen3 + examen4) / 4;
+        return nota_final;
     }
 }
