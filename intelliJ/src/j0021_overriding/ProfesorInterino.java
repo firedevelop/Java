@@ -12,8 +12,8 @@ public class ProfesorInterino extends Profesor {
     }
 
     // Método para obtener la nota media
-    public double getNotaMedia(double pac1, double pac2, double pac3) {
-        double notaMedia = super.examenes(pac1, pac2, pac3);
+    public double getNotaMedia(double examen1, double examen2, double examen3) {
+        double notaMedia = super.examenes(examen1, examen2, examen3);
         System.out.println("Nota Media: " + notaMedia);
         return notaMedia;
     }
