@@ -12,7 +12,6 @@ public class Profesor {
     }
 
     public double examenes(double examen1, double examen2, double examen3) {
-        double notaFinal = (examen1 + examen2 + examen3) / 3;
-        return notaFinal;
+        return (examen1 + examen2 + examen3) / 3;
     }
 }

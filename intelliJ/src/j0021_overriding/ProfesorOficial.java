@@ -13,21 +13,17 @@ public class ProfesorOficial extends Profesor {
 
     // Método para obtener la nota media
     public double getNotaMedia(double examen1, double examen2, double examen3, double examen4) {
-        double notaMedia = pacs(examen1, examen2, examen3, examen4);
-        System.out.println("Nota Media: " + notaMedia);
-        return notaMedia;
+        return pacs(examen1, examen2, examen3, examen4);
     }
 
     // Sobrescritura del método pacs de la clase padre
     @Override
     public double examenes(double examen1, double examen2, double examen3) {
-        double nota_final = ((examen1 + examen2 + examen3) / 3) + 0.6;
-        return nota_final;
+        return ((examen1 + examen2 + examen3) / 3) + 0.6;
     }
 
     // Sobrecarga del método pacs para cuatro parámetros
     public double pacs(double examen1, double examen2, double examen3, double examen4) {
-        double nota_final = (examen1 + examen2 + examen3 + examen4) / 4;
-        return nota_final;
+        return (examen1 + examen2 + examen3 + examen4) / 4;
     }
 }
