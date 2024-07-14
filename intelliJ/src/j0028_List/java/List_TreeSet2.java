@@ -1,7 +1,7 @@
-package j0028_LIST_ArrayList.java;
+package j0028_List.java;
 import java.util.TreeSet;
 
-public class TreeSet2 {
+public class List_TreeSet2 {
     public static void main(String[] args) {
         // Instancia de tipo Genérico
         TreeSet<Integer> arbolPersonas = new TreeSet<>();

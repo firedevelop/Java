@@ -1,4 +1,4 @@
-package j0028_LIST_ArrayList.java;
+package j0028_List.java;
 import java.util.ArrayList;
 // get | indexOf | isEmpty | set | toArray
 

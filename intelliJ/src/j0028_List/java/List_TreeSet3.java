@@ -1,7 +1,7 @@
-package j0028_LIST_ArrayList.java;
+package j0028_List.java;
 import java.util.TreeSet;
 
-public class TreeSet3 {
+public class List_TreeSet3 {
     public static void main(String[] args) {
         // Crear una instancia de TreeSet
         TreeSet<Integer> numeros = new TreeSet<>();
