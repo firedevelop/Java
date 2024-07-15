@@ -1,4 +1,4 @@
-package j0028_List.java;
+package j0028_Collection_List;
 import java.util.Vector;
 
 public class List_Vector {

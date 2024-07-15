@@ -1,4 +1,4 @@
-package j0030_Map;
+package j0030_Collection_Map;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package j0029_Queue;
+package j0029_Collection_Queue;
 import java.util.ArrayDeque;
 
 public class Queue_ArrayDeque {

@@ -1,15 +1,17 @@
 package test;
-public class Main {
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main{
     public static void main(String[] args) {
-        char[] array = new char[]{'h', 'o'};
-        String text1 = new String(" hello    world      ");
-        String text2 = "hello world";
-
-        int num = 123;
-        Double x = Double.valueOf(num);
-        System.out.println(x);
-
-
+        List<Object> a = new ArrayList<>();
+        a.add(2);
+        a.add(2.3);
+        a.add("hello world");
+        for(int i=0; i<a.size(); i++){
+            System.out.println(a.get(i));
+        }
 
     }
 }
