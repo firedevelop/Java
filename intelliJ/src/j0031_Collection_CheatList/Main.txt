@@ -1,0 +1,5 @@
+Map	    .put("uno", 1);       //Añadir
+Map	    .get("uno");         // Devuelve el valor al que se asigna la clave especificada.
+Map	    .keySet();           // Devuelve un Set de todas las claves.
+Map	    .values();          // Devuelve una Collection de todos los valores.
+Map	    .entrySet();        // Devuelve un Set de pares clave-valor.

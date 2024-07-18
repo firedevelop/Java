@@ -19,6 +19,8 @@ public class List_Vector {
         String lastElement = vector.lastElement();
         System.out.println("Último elemento: " + lastElement);
 
+        // Capacidad del vecto: la capacidad que el vector tiene para redimensionarse en caso de necesitarse.
+        // Tamaño: cantidad de elementos efectivamente almacenados
         // Obtener la capacidad del Vector
         int capacity = vector.capacity();
         System.out.println("Capacidad del Vector: " + capacity);
