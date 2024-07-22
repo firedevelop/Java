@@ -18,7 +18,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String nombre = "";
         String passwd = "";
-        boolean valido = true;
+        boolean authentication = true;
 
         try {
             // Pedir los datos para el login
@@ -29,7 +29,7 @@ public class Main {
 
             // Lanzar el método login
             if (!login(nombre, passwd)) {
-                valido = false;
+                authentication = false;
                 throw new ErrorLoginException();
             }
         } catch (ErrorLoginException error) {
@@ -37,7 +37,7 @@ public class Main {
             System.out.println(error.getMessage());
         } finally {
             // Código que se va ejecutar siempre (aunque se entre en el catch)
-            if (valido) {
+            if (authentication) {
                 System.out.println("Wellcome " + nombre);
             } else {
                 System.out.println("reboot app and try again");
