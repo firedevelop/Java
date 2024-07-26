@@ -15,13 +15,14 @@ public class Main {
         Escribir escribir = new Escribir();
         escribir.escribir();
         leer.leer();
+
     }
 }
 
 class Leer {
     public void leer() {
         try (FileReader doc = new FileReader(Main.pathFile);
-             BufferedReader docBuffer = new BufferedReader(doc)) { // Use try-with-resources
+             BufferedReader docBuffer = new BufferedReader(doc)) {
             String txt;
             while ((txt = docBuffer.readLine()) != null) {
                 System.out.println(txt);
@@ -40,7 +41,7 @@ class Escribir {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String timestamp = "\n" + now.format(formatter);
 
-        try (FileWriter doc = new FileWriter(Main.pathFile, true)) { // Use try-with-resources
+        try (FileWriter doc = new FileWriter(Main.pathFile, true)) {
             doc.write(timestamp.toCharArray());
         } catch (IOException e) {
             e.printStackTrace();
