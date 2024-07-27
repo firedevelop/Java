@@ -4,6 +4,7 @@
 /**
  * 
  */
-module eclipse {
+module intelliJ {
     requires jdk.compiler;
+    requires java.sql;
 }
