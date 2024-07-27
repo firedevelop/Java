@@ -10,28 +10,28 @@ import java.util.Random;
 public class DatabaseConnection {
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String BBDD = "jdbc:mysql://127.0.0.1:3306/";
+    private static final String BBDD = "jdbc:mysql://localhost:3306/";
     private static final String DB_NAME = "loteria";
     private static final String USUARIO = "root";
     private static final String PASSWORD = "3M3mj8rvvK1ne5Z4";
 
     public Connection conexionBBDD() {
-        Connection conec = null;
+        Connection connection = null;
         try {
             Class.forName(DRIVER);
-            conec = DriverManager.getConnection(BBDD + DB_NAME, USUARIO, PASSWORD);
+            connection = DriverManager.getConnection(BBDD + DB_NAME, USUARIO, PASSWORD);
         } catch (ClassNotFoundException e) {
-            System.err.println("Se ha producido un error al conectar con la base de datos.\n" + e);
+            System.err.println("Error en DRIVER\n" + e);
         } catch (SQLException e) {
-            System.err.println("Se ha producido un error al conectar con la base de datos.\n" + e);
+            System.err.println("Error al conectar con la BBDD\n" + e);
         }
-        return conec;
+        return connection;
     }
 
-    public void cerrarConexion(Connection conection) {
+    public void cerrarConexion(Connection connection) {
         try {
-            if (conection != null && !conection.isClosed()) {
-                conection.close();
+            if (connection != null && !connection.isClosed()) {
+                connection.close();
             }
         } catch (SQLException e) {
             System.err.println("Se ha producido un error al cerrar la conexión con la base de datos." + e);
@@ -39,19 +39,19 @@ public class DatabaseConnection {
     }
 
     public void createDatabaseAndTable() {
-        Connection conec = null;
-        Statement stmt = null;
+        Connection connection = null;
+        Statement statement = null;
         try {
             Class.forName(DRIVER);
-            conec = DriverManager.getConnection(BBDD, USUARIO, PASSWORD);
-            stmt = conec.createStatement();
+            connection = DriverManager.getConnection(BBDD, USUARIO, PASSWORD);
+            statement = connection.createStatement();
 
             // Crear la base de datos si no existe
             String sql = "CREATE DATABASE IF NOT EXISTS " + DB_NAME;
-            stmt.executeUpdate(sql);
+            statement.executeUpdate(sql);
 
             // Usar la base de datos
-            stmt.executeUpdate("USE " + DB_NAME);
+            statement.executeUpdate("USE " + DB_NAME);
 
             // Crear la tabla si no existe
             sql = "CREATE TABLE IF NOT EXISTS loteria (" +
@@ -63,19 +63,19 @@ public class DatabaseConnection {
                     "num4 INT NOT NULL, " +
                     "num5 INT NOT NULL, " +
                     "complementario INT NOT NULL)";
-            stmt.executeUpdate(sql);
+            statement.executeUpdate(sql);
             System.out.println("Base de datos y tabla creadas correctamente.");
         } catch (ClassNotFoundException e) {
-            System.err.println("Se ha producido un error al conectar con la base de datos.\n" + e);
+            System.err.println("Error en Driver.\n" + e);
         } catch (SQLException e) {
-            System.err.println("Se ha producido un error al crear la base de datos o la tabla.\n" + e);
+            System.err.println("Error en la conexión con Base de datos.\n" + e);
         } finally {
             try {
-                if (stmt != null) {
-                    stmt.close();
+                if (statement != null) {
+                    statement.close();
                 }
-                if (conec != null) {
-                    conec.close();
+                if (connection != null) {
+                    connection.close();
                 }
             } catch (SQLException e) {
                 System.err.println("Se ha producido un error al cerrar la conexión con la base de datos." + e);
@@ -84,47 +84,47 @@ public class DatabaseConnection {
     }
 
     public void insertData() {
-        Connection conec = conexionBBDD();
-        if (conec != null) {
+        Connection connection = conexionBBDD();
+        if (connection != null) {
             try {
                 Random random = new Random();
-                int num1 = random.nextInt(100);
-                int num2 = random.nextInt(100);
-                int num3 = random.nextInt(100);
-                int num4 = random.nextInt(100);
-                int num5 = random.nextInt(100);
-                int complementario = random.nextInt(100);
+                int num1 = random.nextInt(100)+1; //1 y 100
+                int num2 = random.nextInt(100)+1;
+                int num3 = random.nextInt(100)+1;
+                int num4 = random.nextInt(100)+1;
+                int num5 = random.nextInt(100)+1;
+                int complementario = random.nextInt(10)+1;
 
                 String consultaInsercion = String.format(
                         "INSERT INTO loteria (fecha, num1, num2, num3, num4, num5, complementario) " +
-                                "VALUES ('January', '%d', '%d', '%d', '%d', '%d', '%d');",
+                                "VALUES ('2025-10-01', '%d', '%d', '%d', '%d', '%d', '%d');",
                         num1, num2, num3, num4, num5, complementario
                 );
 
                 System.out.println(consultaInsercion);
-                Statement consulta = conec.createStatement();
+                Statement consulta = connection.createStatement();
                 consulta.executeUpdate(consultaInsercion);
                 System.out.println("Datos insertados correctamente");
                 consulta.close();
             } catch (SQLException e) {
                 System.err.println("Se ha producido un error al insertar en la base de datos.\n" + e);
             } finally {
-                cerrarConexion(conec);
+                cerrarConexion(connection);
             }
         }
     }
 
     public void getData() {
-        Connection conec = conexionBBDD();
-        if (conec != null) {
+        Connection connection = conexionBBDD();
+        if (connection != null) {
             try {
                 String consultaSeleccion = "SELECT * FROM loteria;";
                 System.out.println(consultaSeleccion);
-                Statement consulta = conec.createStatement();
+                Statement consulta = connection.createStatement();
                 if (consulta.execute(consultaSeleccion)) {
                     ResultSet resultSet = consulta.getResultSet();
                     while (resultSet.next()) {
-                        loteria loteria = new loteria(
+                        Loteria loteria = new Loteria(
                                 resultSet.getInt("id"),
                                 resultSet.getString("fecha"),
                                 resultSet.getString("num1"),
@@ -142,7 +142,7 @@ public class DatabaseConnection {
             } catch (SQLException e) {
                 System.err.println("Se ha producido un error al recuperar los datos de la base de datos.\n" + e);
             } finally {
-                cerrarConexion(conec);
+                cerrarConexion(connection);
             }
         }
     }
@@ -155,7 +155,7 @@ public class DatabaseConnection {
     }
 }
 
-class loteria {
+class Loteria {
     private int id;
     private String fecha;
     private String num1;
@@ -165,7 +165,7 @@ class loteria {
     private String num5;
     private String complementario;
 
-    public loteria(int id, String fecha, String num1, String num2, String num3, String num4, String num5, String complementario) {
+    public Loteria(int id, String fecha, String num1, String num2, String num3, String num4, String num5, String complementario) {
         this.id = id;
         this.fecha = fecha;
         this.num1 = num1;
