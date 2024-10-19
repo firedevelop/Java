@@ -1,4 +1,4 @@
-package j0041_VT03_Ejercicio1;
+package j0042_VT03_Ejercicio1;
 
 public class Calculadora{
     private int total = 0;

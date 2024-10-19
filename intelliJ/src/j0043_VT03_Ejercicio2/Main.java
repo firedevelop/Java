@@ -1,4 +1,4 @@
-package j0041_VT03_Ejercicio3;
+package j0043_VT03_Ejercicio2;
 
 public class Main{
     public static void main(String[] args) {
