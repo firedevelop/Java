@@ -14,7 +14,6 @@ public class Libro {
         this.ISBN = ISBN;
         this.autor = autor;
         this.titulo = titulo;
-        this.year = year;
         this.editorial = editorial;
         this.numeroPaginas = numeroPaginas;
     }
@@ -22,6 +21,7 @@ public class Libro {
     public void getLibro(){
         System.out.println("ISBN: " + ISBN);
         System.out.println("autor: " + autor);
+        this.year = year;
         System.out.println("titulo: " + titulo);
         System.out.println("year: " + year);
         System.out.println("editorial: " + editorial );

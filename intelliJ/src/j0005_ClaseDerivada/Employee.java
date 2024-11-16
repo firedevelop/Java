@@ -2,20 +2,21 @@ package j0005_ClaseDerivada;
 import java.util.Date;
 
 public class Employee {
-    // Atributos
+// Atributos
     private String passport;
     private String name;
     private double salary;
-        private Date birthDay;
+    private Date birthDay;
 
-    // Constructor por Defecto
+// Constructor por Defecto
     public Employee() {
         this.passport = "100200300";
         this.name = "John";
         this.salary = 1000;
         this.birthDay = new Date();
     }
-    // Constructor Parametrizado
+
+// Constructor Parametrizado
     public Employee(String passport, String name, double salary, Date fn) {
         this.passport = passport;
         this.name = name;
@@ -23,7 +24,7 @@ public class Employee {
         this.birthDay = fn;
     }
 
-    // Métodos GET y SET
+// Métodos GET y SET
     public String getPassport() { return passport; }
     public void setPassport(String passport) { this.passport = passport; }
     public String getName() { return name; }
@@ -33,10 +34,12 @@ public class Employee {
     public double getSalary() { return salary; }
     public void setSalary(double salary) { this.salary = salary; }
 
-    // Métodos
+// Métodos
     public double horasExtras(double horas) {
         double PrecioHora = 11;
         double extras = horas * PrecioHora;
         return extras;
     }
 }
+
+

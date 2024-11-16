@@ -8,21 +8,24 @@ public class Business {
     protected int phone; // Cambiado a protected para el acceso en ClaseDerivada
     protected String address; // Cambiado a protected para el acceso en ClaseDerivada
 
-    // Constructores
+    // Constructor 0 parametres
     public Business() {
         employee = new Employee();
-        phone = 900730222;
-        address = "Gran Via 33";
+        phone = 222;
+        address = "Gran Via 222";
     }
 
+    // Constructor 1 parametres. (Employee employee) en el constructor Business significa que, para crear un objeto Business, debes pasar un objeto de tipo Employee como argumento.
     public Business(Employee employee) {
         this(employee, 900730222, "Sol 1");
     }
 
+    // Constructor 2 parametres
     public Business(int phone, String address) {
         this(new Employee(), phone, address);
     }
 
+    // Constructor 3 parametres
     public Business(Employee employee, int phone, String address) {
         this.employee = employee;
         this.phone = phone;

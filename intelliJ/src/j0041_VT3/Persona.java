@@ -45,14 +45,12 @@ public class Persona {
 			System.out.println("Es menor de edad");
 		}
 	}
-	
+
 	public void mostrarDatos() {
 		System.out.println("Nombre: "+this.getNombre());
 		System.out.println("Apellidos: "+this.getApellido1()+ " "+ this.getApellido2());
 		System.out.println("Sexo: "+this.getSexo());
 		System.out.println("Edad: "+this.getEdad());
 	}
-
-	
 }
 

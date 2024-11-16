@@ -15,7 +15,8 @@ public class Main {
         System.out.println("Edad: " + edad + " años");
         System.out.println("Carrera: " + carrera);
     }
-    public void saludarProfesor(){
+
+    public void saludarProfesor() {
         System.out.println("Hola profesor, soy " + nombre + ". Hi man! \n");
     }
 

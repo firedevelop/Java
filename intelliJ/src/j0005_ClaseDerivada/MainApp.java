@@ -7,11 +7,20 @@ public class MainApp {
         Employee employee1 = new Employee();
         System.out.println("Empleado1: " + employee1.getName() + ", " + employee1.getPassport() + ", " + employee1.getSalary() + ", " + employee1.getBirthDay());
 
-
         Date birthDay = new Date();
         Employee employee2 = new Employee("12345678A", "Mery", 2000, birthDay);
         System.out.println("Empleado2: " + employee2.getName() + ", " + employee2.getPassport() + ", " + employee2.getSalary() + ", " + employee2.getBirthDay());
 
+        // Instance Constructor 0 parametres
+        Business business0parametres = new Business();
+        System.out.println(
+                "business0parametres phone: "
+                        + business0parametres.phone
+                        + "business0parametres name: "
+                        + business0parametres.employee.getName()
+        );
+
+        // Instance Constructor 3 parametres
         Business business = new Business(employee2, 123456789, "Wall Street 100");
         System.out.println("Empresa: " + business.employee.getName() + ", " + business.phone + ", " + business.address);
 
@@ -20,19 +29,24 @@ public class MainApp {
         double horasExtras2 = employee1.horasExtras(10);
         System.out.println("Horas extras2: " + horasExtras2);
 
+        // Instance 3 1
+        employee1.setName("Peter");
+        System.out.println(
+                "Name: " + employee1.getName()
+                        + " Phone: " + business.phone
+        );
+
         try {
             Date fechaFormateada = business.fechaNac("15/06/1985");
             System.out.println("Fecha formateada: " + fechaFormateada);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+    } catch (ParseException e) {
+        e.printStackTrace();
+    }
 
         // Crear una instancia de ClaseDerivada y mostrar la información
         ClaseDerivada claseDerivada = new ClaseDerivada(
                 employee2, 987654321,
                 "Quinta Avenida 10");
         claseDerivada.mostrarInformacion();
-        ClaseDerivada claseDerivadaDefault = new ClaseDerivada();
-
     }
 }

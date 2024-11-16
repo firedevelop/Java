@@ -1,6 +1,7 @@
 package J0049_VT04_PAC;
-public class Main{
-    public static void main (String[] args){
+
+public class Main {
+    public static void main(String[] args) {
 
         // declara un array de enteros.
 
@@ -8,29 +9,29 @@ public class Main{
 
         // asignando memoria para 5 enteros.
 
-        arr = new int[ 5 ];
+        arr = new int[5];
 
         // inicializa el primer elemento del array
 
-        arr[ 0 ] = 10;
+        arr[0] = 10;
 
         // inicializa el segundo elemento del array
 
-        arr[ 1 ] = 20;
+        arr[1] = 20;
 
         // y así...
 
-        arr[ 2 ] = 30;
+        arr[2] = 30;
 
-        arr[ 3 ] = 40;
+        arr[3] = 40;
 
-        arr[ 4 ] = 50;
+        arr[4] = 50;
 
         // accediendo a los elementos del array
 
-   for (int i = 0; i < arr.length; i++)
+        for (int i = 0; i < arr.length; i++)
 
-        System.out.println("Elemento en el índice " + i + " : "+ arr[ i ]);
+            System.out.println("Elemento en el índice " + i + " : " + arr[i]);
 
     }
 
