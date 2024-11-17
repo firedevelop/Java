@@ -1,4 +1,4 @@
-package j0053_VT06_Ejercicio_11_Matriz_Aleatoria;
+package j0054_T09_VT06_Ejercicio_11A_Matriz_Aleatoria;
 import java.util.Random;
 
 public class Main {

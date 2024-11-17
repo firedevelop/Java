@@ -1,4 +1,4 @@
-package j0054_T08_Extends;
+package j0049_T08_Extends;
 public class ProfesorOficial extends Main {
     // Constructor
     public ProfesorOficial() {

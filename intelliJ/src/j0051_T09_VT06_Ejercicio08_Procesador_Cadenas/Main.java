@@ -1,4 +1,4 @@
-package j0050_VT06_Ejercicio_08_Procesador_Cadenas;
+package j0051_T09_VT06_Ejercicio08_Procesador_Cadenas;
 
 import java.util.Scanner;
 

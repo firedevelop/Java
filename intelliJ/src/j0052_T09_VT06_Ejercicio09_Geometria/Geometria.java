@@ -1,4 +1,4 @@
-package j0051_VT06_Ejercicio9_Geometria;
+package j0052_T09_VT06_Ejercicio09_Geometria;
 
 public class Geometria {
 	public static double areaCuadrado(int lado) {

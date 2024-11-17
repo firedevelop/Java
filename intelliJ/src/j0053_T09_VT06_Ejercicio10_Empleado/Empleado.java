@@ -1,4 +1,4 @@
-package j0052_VT06_Ejercicio10_Empleado;
+package j0053_T09_VT06_Ejercicio10_Empleado;
 
 public class Empleado {
     private String nombre;
