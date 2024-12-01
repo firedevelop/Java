@@ -1,7 +1,7 @@
-package j0028_Collection_List;
+package j0065_T10_Collection_SET;
 import java.util.TreeSet;
 
-public class List_TreeSet3 {
+public class Set_02_TreeSet {
     public static void main(String[] args) {
         // Crear una instancia de TreeSet
         TreeSet<Integer> numeros = new TreeSet<>();

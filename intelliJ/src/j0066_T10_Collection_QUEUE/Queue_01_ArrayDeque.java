@@ -1,8 +1,8 @@
-package j0029_Collection_Queue;
+package j0066_T10_Collection_QUEUE;
 
 import java.util.ArrayDeque;
 
-public class Queue_ArrayDeque2 {
+public class Queue_01_ArrayDeque {
     public static void main(String[] args) {
         // Instancia de ArrayDeque como Queue
         ArrayDeque<Integer> deque = new ArrayDeque<>();

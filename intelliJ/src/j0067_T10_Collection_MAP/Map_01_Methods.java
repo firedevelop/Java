@@ -1,10 +1,10 @@
-package j0030_Collection_Map;
+package j0067_T10_Collection_MAP;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.Collection;
 
-public class MapMethods {
+public class Map_01_Methods {
     public static void main(String[] args) {
         // Crear un mapa
         Map<String, Integer> map = new HashMap<>();

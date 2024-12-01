@@ -1,4 +1,4 @@
-package J0032_Regex;// Se importa el paquete java.util.regex
+package J0069_T10_Regex;// Se importa el paquete java.util.regex
 import java.util.regex.*;
 
 public class Main {
@@ -11,6 +11,5 @@ public class Main {
         String resultado = encaja.replaceAll("_");
         System.out.println(resultado);
     }
-
 
 }

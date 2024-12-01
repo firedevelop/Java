@@ -1,7 +1,7 @@
-package j0030_Collection_Map;
+package j0067_T10_Collection_MAP;
 import java.util.Map;
 import java.util.HashMap;
-public class Map_HashMap{
+public class Map_02_HashMap {
     public static void main(String[]args){
 //Instancia de tipo genérico
         HashMap alumno = new HashMap();

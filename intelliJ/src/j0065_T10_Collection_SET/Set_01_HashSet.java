@@ -1,7 +1,7 @@
-package j0028_Collection_List;
+package j0065_T10_Collection_SET;
 import java.util.HashSet;
 
-public class List_HashSet2 {
+public class Set_01_HashSet {
     public static void main(String[] args) {
         // Crear una instancia de HashSet
         HashSet<String> conjunto = new HashSet<>();

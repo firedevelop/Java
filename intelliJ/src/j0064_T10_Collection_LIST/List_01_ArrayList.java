@@ -1,8 +1,8 @@
-package j0028_Collection_List;
+package j0064_T10_Collection_LIST;
 import java.util.ArrayList;
 // get | indexOf | isEmpty | set | toArray
 
-public class List_ArrayList {
+public class List_01_ArrayList {
     public static void main(String[] args) {
         // Crear una instancia de ArrayList
         ArrayList<String> list = new ArrayList<>();
@@ -30,9 +30,9 @@ public class List_ArrayList {
         System.out.println("List after setting index 1 to 'Blueberry': " + list);
 
         // Convertir la lista a un array (toArray)
-        Object[] array = list.toArray();
+        Object[] array = list.toArray(); // convierte list en un array de objetos
         System.out.println("Array contents:");
-        for (Object obj : array) {
+        for (Object obj : array) {  // obj es la variable que contiene cada elemento del array en cada iteración.
             System.out.println(obj);
         }
     }

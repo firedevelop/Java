@@ -1,7 +1,7 @@
-package j0028_Collection_List;
+package j0064_T10_Collection_LIST;
 import java.util.Vector;
 
-public class List_Vector {
+public class List_03_Vector {
     public static void main(String[] args) {
         // Crear un Vector
         Vector<String> vector = new Vector<>();

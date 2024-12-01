@@ -1,9 +1,16 @@
 package test;
-public class Main{
-    protected String dni;
-    protected String name;
+import java.util.regex.*;
 
-    public double pacs(double pac1, double pac2, double pac3, double pac4){
-        return (pac1 + pac2 + pac3)/3;
+public class Main {
+    public static void main(String[] args) {
+        String cadena = "aabb"; // Cadena a evaluar
+        Pattern pat = Pattern.compile("(a|b)+");
+        Matcher mat = pat.matcher(cadena);
+
+        if (mat.matches()) {
+            System.out.println("SI");
+        } else {
+            System.out.println("NO");
+        }
     }
 }
